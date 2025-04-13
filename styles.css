@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+  }
+
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+  }
+
+.container-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto); /* Stack cards vertically on small screens */
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 20px;
+  } 
+  
+  .header > :first-child  {
+    font-size: 2rem;
+    font-weight:lighter;
+    color: hsl(212, 6%, 44%);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header > h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: hsl(234, 12%, 34%);
+    margin: 0;
+    padding: 0;
+  }
+  .header > :last-child  {
+    color: hsl(212, 6%, 44%);
+    font-size: 0.8rem;
+  }
+  .card {
+    background-color: #ffffff;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:center;
+    text-align:left;
+  }
+  .card img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    align-self: self-end;
+  }
+    .card h2 {
+        font-size: 1rem;
+        color: hsl(212, 6%, 44%);
+        margin: 0;
+        padding: 0;
+    }
+    .card p {
+        font-size: 1rem;
+        color: hsl(212, 6%, 44%);
+        padding: 0; 
+    }
+    .supervisor {
+        align-self: center;
+        border-top: 6px solid  hsl(180, 62%, 55%);
+      }
+      
+      .team-builder {
+        border-top: 6px solid hsl(0, 78%, 62%);
+      }
+      .karma {
+        border-top: 6px solid hsl(34, 97%, 64%);
+      }
+      
+      .calculator {
+        align-self: center;
+        border-top: 6px solid hsl(212, 86%, 64%);
+      }
+    @media (min-width: 768px) {
+        .container-grid{
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+        
+          }
+          .header {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+          }
+    
+          .header > :last-child  {
+            width: 40%;
+          }
+  .supervisor {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    align-self: center;
+    border-top: 6px solid  hsl(180, 62%, 55%);
+  }
+  
+  .team-builder {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-top: 6px solid hsl(0, 78%, 62%);
+  }
+  .karma {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    border-top: 6px solid hsl(34, 97%, 64%);
+  }
+  
+  .calculator {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    align-self: center;
+    border-top: 6px solid hsl(212, 86%, 64%);
+  }
+}
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+  }
+  
+  footer a {
+    color: #0078d4;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
